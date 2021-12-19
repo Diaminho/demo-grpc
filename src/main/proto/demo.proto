@@ -1,0 +1,16 @@
+syntax = "proto3";
+package com.diaminho.demogrpc;
+option java_multiple_files = true;
+
+message Request {
+  string payload = 1;
+}
+
+message Response {
+  string message = 1;
+}
+
+service DemoService {
+  rpc process (Request) returns (Response) {
+  }
+}
